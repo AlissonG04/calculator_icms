@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <h2>Calculadora de Toneladas</h2>
+
+        <form id="calculator-form">
+          <div>
+            <label for="checkboxMetrosToneladas">
+              <input
+                type="checkbox"
+                id="checkboxMetrosToneladas"
+                name="checkboxMetrosToneladas"
+              />
+              Metros para Toneladas
+            </label>
+          </div>
+
+          <div>
+            <label for="checkboxToneladasMetros">
+              <input
+                type="checkbox"
+                id="checkboxToneladasMetros"
+                name="checkboxToneladasMetros"
+              />
+              Toneladas para Metros
+            </label>
+          </div>
+
+          <div>
+            <label for="valor">Valor:</label>
+            <input
+              type="number"
+              id="valor"
+              name="valor"
+              step="0.010"
+              required
+            />
+          </div>
+
+          <button class="calculate-button" type="submit">Calcular</button>
+        </form>
+
+        <div id="result"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
