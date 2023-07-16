@@ -12,16 +12,22 @@ document
     var valor = parseFloat(document.getElementById("valor").value);
     var result;
 
+    if (checkboxMetrosToneladas.checked && checkboxToneladasMetros.checked) {
+      document.getElementById("result").innerHTML =
+        "Selecione apenas uma opção de cálculo.";
+      return;
+    }
+
     if (checkboxMetrosToneladas.checked) {
       result = valor * 1.3;
       document.getElementById("result").innerHTML =
         "Resultado (Metros para Toneladas): " + result.toFixed(2);
     } else if (checkboxToneladasMetros.checked) {
-      result = 1.3 / valor;
+      result = valor / 1.3;
       document.getElementById("result").innerHTML =
         "Resultado (Toneladas para Metros): " + result.toFixed(2);
     } else {
       document.getElementById("result").innerHTML =
-        "Selecione uma opção de cálculo.";
+        "Por favor, selecione uma opção de cálculo.";
     }
   });
