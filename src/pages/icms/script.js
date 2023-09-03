@@ -4,14 +4,14 @@ document
     event.preventDefault();
 
     var km = parseFloat(document.getElementById("km").value);
-    var viagens = parseInt(document.getElementById("viagens").value);
-    var pauta = parseFloat(document.getElementById("pauta").value);
-    var aliquotaIcms = parseFloat(
+    var trips = parseInt(document.getElementById("viagens").value);
+    var schedule = parseFloat(document.getElementById("pauta").value);
+    var aliquotIcms = parseFloat(
       document.getElementById("aliquota-icms").value
     );
 
-    var valorFrete = (km * viagens * pauta * aliquotaIcms) / 100;
+    var freightValue = (km * trips * schedule * aliquotIcms) / 100;
 
     document.getElementById("result").innerHTML =
-      "Valor do Frete: R$ " + valorFrete.toFixed(2);
+      "Valor do Frete: R$ " + freightValue.toFixed(2);
   });
