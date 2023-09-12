@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tela Home</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="index.js"></script>
   </head>
   <body>
     <header class="header">
@@ -12,12 +13,12 @@
         <img src="./src/img/logo.png" alt="Logo do Cabeçalho" />
       </div>
       <div class="header-buttons">
-        <a href="./src/pages/icms/index.html" class="header-button"
-          >Calcular ICMS de Frete</a
-        >
-        <a href="./src/pages/calculo/index.html" class="header-button"
-          >Conversão de Toneladas</a
-        >
+        <button onclick="onClickButtonIcms()" class="header-button">
+          Calcular ICMS de Frete
+        </button>
+        <button onclick="onClickButtonConvertion()" class="header-button">
+          Conversão de Toneladas
+        </button>
       </div>
     </header>
     <div class="main-content">
